@@ -37,6 +37,7 @@ Route::middleware('auth')->group(function () { //queste rotte puo' usarle solo L
         'projects'=> 'project:slug'
     ])->withTrashed(['show','destroy']);
 
+
 });
 
 require __DIR__.'/auth.php';

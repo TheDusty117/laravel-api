@@ -17,3 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+//registro una nuova rotta in questo file api.php
+
+Route::get('/routetest', function(){
+    return response()->json([
+        'name' => 'Gabriele',
+        'role' => 'admin',
+    ]);
+});
