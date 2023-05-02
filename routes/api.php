@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ProjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +20,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-//registro una nuova rotta in questo file api.php
+//REGISTRO LA ROTTA DEI PROJECT, trasformati in json nel file controller Api/ProjectController
+
+Route::get('/projects', [ProjectController::class,'index']);
+
+
+
+//registro una nuova PROVA rotta in questo file api.php
 
 Route::get('/routetest', function(){
     return response()->json([
