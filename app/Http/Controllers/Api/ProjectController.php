@@ -10,7 +10,7 @@ class ProjectController extends Controller
 {
     public function index(){
 
-        $projects = Project::all();  //prendo tutti i prject
+        $projects = Project::limit(20)->get();  //prendo tutti i prject
 
         return response()->json([   //rendo i project del JSON
             'projects' => $projects,
