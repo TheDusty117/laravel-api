@@ -11,7 +11,7 @@ class ProjectController extends Controller
     public function index(){
 
         // $projects = Project::limit(20)->get();  //prendo tutti i prject
-        $projects = Project::with('client','description','category')->orderBy('created_at', 'asc')->paginate(10); //paginate gestisce la paginazione e esegue la query
+        $projects = Project::with('technologies','category')->orderBy('created_at', 'asc')->paginate(10); //paginate gestisce la paginazione e esegue la query
 
 
         return response()->json([   //trasformo i project in JSON
