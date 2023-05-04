@@ -20,4 +20,13 @@ class ProjectController extends Controller
         ]);
 
     }
+
+    public function show($slug){
+
+        return response()->json([
+            'success' => true,
+            'project' => $slug
+        ]);
+
+    }
 }
