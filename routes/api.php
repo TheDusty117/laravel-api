@@ -27,7 +27,7 @@ Route::get('/projects', [ProjectController::class,'index']);
 
 //creo la rotta api per il PROJECT DETAIL
 
-Route::get('project/{slug}',[ProjectController::class,'show'])
+Route::get('projects/{slug}',[ProjectController::class,'show']);
 
 //registro una nuova PROVA rotta in questo file api.php
 
