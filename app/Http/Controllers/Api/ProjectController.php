@@ -26,7 +26,7 @@ class ProjectController extends Controller
 
         //recuperiamo il progetto per stamparlo nel Project Detail
 
-        $project = Project::where('slug',$slug)->first();   //recuperiamo un singolo project in base allo SLUG
+        $project = Project::with('category:name,slug', 'technologies:name,slug')->where('slug',$slug)->first();   //recuperiamo un singolo project in base allo SLUG
 
         //controlliamo se il project esiste o meno, se esiste ritorniamo response json(qui sotto), altrimenti faremo uscire un messaggio di errore o altro
 
