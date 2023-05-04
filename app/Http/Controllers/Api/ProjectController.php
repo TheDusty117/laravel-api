@@ -30,16 +30,21 @@ class ProjectController extends Controller
 
         //controlliamo se il project esiste o meno, se esiste ritorniamo response json(qui sotto), altrimenti faremo uscire un messaggio di errore o altro
 
+
         if($project){
+
             return response()->json([
                 'success' => true,
                 'project' => $project
             ]);
+
         } else {
+
             return response()->json([
                 'success' => false,
-                'error' => 'Nessun progetto trovato!'
+                'error' => 'nessun project trovato'
             ]);
+
         }
 
 
